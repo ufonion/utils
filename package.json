@@ -1,0 +1,78 @@
+{
+  "name": "@globefish/utils",
+  "version": "0.0.2",
+  "description": "Collection of utilities",
+  "main": "dist/index.js",
+  "repository": "git@github.com:ufonion/utils.git",
+  "author": "Marshall Ma <mayongcong@gmail.com>",
+  "license": "MIT",
+  "scripty": {
+    "silent": true
+  },
+  "bin": {
+    "traverseDir": "dist/cli/traverseDir.js"
+  },
+  "scripts": {
+    "clean": "SCRIPTY_PARALLEL=true scripty",
+    "build": "scripty",
+    "compile": "scripty",
+    "test": "scripty",
+    "testall": "scripty",
+    "_on_compile_success": "scripty",
+    "_on_compile_failure": "scripty",
+    "_copylib": "mkdir -p dist && cp -R build/src/* dist/",
+    "start": "NODE_ENV=production node dist/index.js &",
+    "gittag": "scripty",
+    "format": "tsfmt -r",
+    "lint": "scripty",
+    "compile:typescript": "scripty",
+    "doc": "scripty",
+    "tsdoc": "typedoc && touch docs/.nojekyll"
+  },
+  "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/lodash": "^4.14.144",
+    "@types/minimist": "^1.2.0",
+    "@types/mocha": "5.2.5",
+    "@types/mz": "^0.0.32",
+    "@types/node-fetch": "^2.5.3",
+    "@types/shelljs": "^0.8.6",
+    "bunyan": "^1.8.12",
+    "chai": "4.2.0",
+    "clarify": "2.1.0",
+    "doctoc": "1.4.0",
+    "jscpd": "^2.0.16",
+    "mocha": "5.2.0",
+    "mochawesome": "3.1.1",
+    "node-fetch": "2.3.0",
+    "plantuml-encoder": "1.2.5",
+    "redoc-cli": "0.8.5",
+    "scripty": "1.9.0",
+    "shelljs": "^0.8.3",
+    "source-map-support": "0.5.10",
+    "trace": "3.1.1",
+    "ts-node": "^8.4.1",
+    "tsc-watch": "1.0.31",
+    "tslint": "5.12.1",
+    "tslint-consistent-codestyle": "1.15.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-no-unused-expression-chai": "0.1.4",
+    "tslint-sonarts": "1.8.0",
+    "tslint-strict-error-throw": "1.0.1",
+    "typedoc": "^0.15.0",
+    "typescript": "3.6.3",
+    "typescript-formatter": "7.2.2"
+  },
+  "typings": "dist/index.d.ts",
+  "bundledDependencies": [],
+  "resolutions": {
+    "**/typescript": "3.6.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "minimist": "^1.2.0",
+    "minimist-options": "^4.0.2",
+    "mrm-core": "^3.3.4",
+    "mz": "^2.7.0"
+  }
+}
