@@ -26,3 +26,5 @@ reports/
 *.tmp
 *.bak
 *.swp
+.npmrc
+yarn.lock

@@ -1,6 +1,6 @@
 {
   "name": "@globefish/utils",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Collection of utilities",
   "main": "dist/index.js",
   "repository": "git@github.com:ufonion/utils.git",
@@ -12,6 +12,11 @@
   "bin": {
     "traverseDir": "dist/cli/traverseDir.js"
   },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.js.map"
+  ],
   "scripts": {
     "clean": "SCRIPTY_PARALLEL=true scripty",
     "build": "scripty",
@@ -28,6 +33,7 @@
     "compile:typescript": "scripty",
     "doc": "scripty",
     "tsdoc": "typedoc && touch docs/.nojekyll",
+    "prepare": "yarn build",
     "npm_publish": "scripty"
   },
   "devDependencies": {
@@ -65,7 +71,9 @@
     "typescript-formatter": "7.2.2"
   },
   "typings": "dist/index.d.ts",
-  "bundledDependencies": [],
+  "bundledDependencies": [
+    "shelljs"
+  ],
   "resolutions": {
     "**/typescript": "3.6.3"
   },
@@ -73,7 +81,6 @@
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.2",
-    "mrm-core": "^3.3.4",
     "mz": "^2.7.0"
   }
 }
