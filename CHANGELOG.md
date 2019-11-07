@@ -1,6 +1,11 @@
 @globefish/util
 
-## 0.0.4 (2017-11-07)
+## 0.0.7 (2017-11-07)
+
+* Fixed
+  * `traverseDir`: fix version display
+
+## 0.0.6 (2017-11-07)
 
 * Fixed
   * Add `#!/usr/bin/env node` to the prog

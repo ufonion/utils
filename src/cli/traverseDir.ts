@@ -5,7 +5,6 @@ import * as minimistOptions from 'minimist-options';
 import * as shelljs from 'shelljs';
 import { ListMode, listFiles } from '../lib/fsDir';
 import * as _ from 'lodash';
-import { packageJson } from 'mrm-core';
 
 const progName = 'traverseDir';
 
@@ -97,17 +96,26 @@ function main(): void {
   }
 }
 
+function getPkgInfo(): { name: string, version: string } {
+  // tslint:disable-next-line: no-require-imports
+  const pkg = require('../../package.json');
+  return {
+    // tslint:disable-next-line: no-unsafe-any
+    name: pkg.name,
+    // tslint:disable-next-line: no-unsafe-any
+    version: pkg.version,
+  };
+}
+
 function printVersion(): void {
-  const pkgVersion = <string>packageJson().get('version');
-  const pkgName = <string>packageJson().get('name');
-  process.stdout.write(`${pkgName} ${pkgVersion}\n  - ${progName}\n`);
+  const { name, version } = getPkgInfo();
+  process.stdout.write(`${name} ${version}\n  - ${progName}\n`);
 }
 
 function printHelp(): void {
-  const pkgVersion = <string>packageJson().get('version');
-  const pkgName = <string>packageJson().get('name');
+  const { name, version } = getPkgInfo();
   const helpMsg =
-    `${pkgName} ${pkgVersion}
+    `${name} ${version}
 Usage: ${progName} [--cmd, -c] [CMD] [--mode, -m] [MODE]
           [--depth, -d] [DEPTH] [DIR1] [DIR2] ... [DIRn]
 
