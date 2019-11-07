@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as minimist from 'minimist';
 import * as minimistOptions from 'minimist-options';
 import * as shelljs from 'shelljs';

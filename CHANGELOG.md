@@ -1,5 +1,10 @@
 @globefish/util
 
+## 0.0.4 (2017-11-07)
+
+* Fixed
+  * Add `#!/usr/bin/env node` to the prog
+
 ## 0.0.3 (2017-11-07)
 
 * Fixed:
