@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [utils](#utils)
+- [@globefish/utils](#globefishutils)
   - [cli](#cli)
     - [`traverseDir`](#traversedir)
       - [Usage](#usage)
@@ -10,9 +10,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# utils
+# @globefish/utils
 
-Collection of utilities
+Collection of utilities.
 
 ## cli
 
